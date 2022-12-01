@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&amp;display=swap">
+  <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+  <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+  <link rel="stylesheet" href="assets/css/Drag--Drop-Upload-Form.css">
+  <link rel="stylesheet" href="assets/css/Table-With-Search-search-table.css">
+  <link rel="stylesheet" href="assets/css/Table-With-Search.css">
+  <script type="text/javascript" src="eel.js"></script>
+</head>
+
+<body>
+  <div class="col">
+    <div class="dashed_upload">
+      <div class="wrapper">
+        <div class="drop">
+          <div class="cont">
+            <i class="fa fa-cloud-upload"></i>
+            <div class="tit">
+              Drag & Drop
+            </div>
+            <div class="desc">
+              or
+            </div>
+            <div class="browse">
+              click here to browse
+            </div>
+          </div>
+          <output id="list"></output><input id="files" multiple name="files[]" type="file" />
+        </div>
+      </div>
+      <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+      <script src="js/index.js"></script>
+    </div>
+  </div>
+  <div class="col-md-12 search-table-col">
+    <div class="form-group pull-right col-lg-4"><input type="text" class="search form-control"
+        placeholder="Search by typing here.."></div><span class="counter pull-right"></span>
+    <div class="table-responsive table table-hover table-bordered results">
+      <table class="table table-hover table-bordered">
+        <thead class="bill-header cs">
+          <tr>
+            <th id="trs-hd-1" class="col-lg-1">SL. No.</th>
+            <th id="trs-hd-2" class="col-lg-2">Area</th>
+            <th id="trs-hd-3" class="col-lg-3">Customer Name</th>
+            <th id="trs-hd-4" class="col-lg-2">Company Name</th>
+            <th id="trs-hd-5" class="col-lg-2">Member Since</th>
+            <th id="trs-hd-6" class="col-lg-2">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="warning no-result">
+            <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
+          </tr>
+          <tr id="tasks" onfocus="say_hello_js()">
+            <td>01</td>
+            <td>India</td>
+            <td>Souvik Kundu</td>
+            <td>Bootstrap Stuido</td>
+            <td>2014</td>
+            <td><button class="btn btn-success" style="margin-left: 5px;" type="submit"><i
+                  class="fa fa-check" style="font-size: 15px;"></i></button><button
+                class="btn btn-danger" style="margin-left: 5px;" type="submit"><i
+                  class="fa fa-trash" style="font-size: 15px;"></i></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div>
+    <ul id="taskers"><span onclick="say_hello_js()">
+        <li id="task0"><span onclick="say_hello_js()"><i class="fa fa-trash">X</i></span> Learn HTML
+        </li>
+        <li id="task1"><span onclick="say_hello_js()"><i class="fa fa-trash">X</i></span> Learn
+          Python</li>
+        <li id="task2"><span onclick="say_hello_js()"><i class="fa fa-trash">X</i></span> Make a
+          Neutron project</li>
+    </ul> </span>
+    <script type="text/javascript">
+      // instantiate python function with onfocus timing
+      function say_hello_js() {
+        eel.hello();
+        document.getElementById("tasks").innerText = val;
+      }
+
+      // in python it will call this function
+      //  and push val2 over as val
+      eel.expose(returner);
+
+      function returner(val) {
+        document.getElementById("tasks").innerHTML = val;
+      }
+      say_hello_js("Javascript World!");
+      eel.say_hello_py("Javascript World!"); // Call a Python function
+    </script>
+
+
+  </div>
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/Table-With-Search.js"></script>
+</body>
+
+</html>
