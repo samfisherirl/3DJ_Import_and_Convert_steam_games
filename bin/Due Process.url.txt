@@ -1,0 +1,7 @@
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,0
+[InternetShortcut]
+IDList=
+IconIndex=0
+URL=steam://rungameid/753650
+IconFile=C:\Program Files (x86)\Steam\steam\games\968e39cdfd779b086c83180defc430082e7edb2a.ico
